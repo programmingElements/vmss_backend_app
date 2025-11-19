@@ -16,10 +16,11 @@ const app = express();
 const PORT = process.env.PORT || 5002;
 
 
-// middleware 
-app.use(cors({
-    origin: ["http://localhost:5173"]
-}));
+// middleware
+app.use(cors()) // Enable All CORS Requests
+// app.use(cors({
+//     origin: ["http://localhost:5173"]
+// }));
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
 app.use(express.urlencoded({extended: true}));
 
